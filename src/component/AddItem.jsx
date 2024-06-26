@@ -3,8 +3,8 @@ import { useState } from 'react'
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
 
-// const URI = 'http://martinandresconti.alwaysdata.net/items'
-const URI = 'http://localhost:3000/items/'
+const URI = 'http://martinandresconti.alwaysdata.net/items'
+// const URI = 'http://localhost:3000/items/'
 
 export default function AddItem() {
   const [cerveza, setCerveza] = useState('')

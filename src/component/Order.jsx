@@ -2,8 +2,8 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-// const URI = 'http://martinandresconti.alwaysdata.net/items/'
-const URI = 'http://localhost:3000/items/'
+const URI = 'http://martinandresconti.alwaysdata.net/items/'
+// const URI = 'http://localhost:3000/items/'
 
 export default function Order() {
   const [items, setItems] = useState([]);
