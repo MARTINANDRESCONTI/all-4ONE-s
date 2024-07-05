@@ -1,39 +1,52 @@
-import React from 'react'
-import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+// import React from 'react'
+// import axios from 'axios'
+// import { useState } from 'react'
+// import { useNavigate } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
-export default function SingIn() {
-  const [nombre, setNombre] = useState('')
-  const [contraseña, setContraseña] = useState('')
-  const navigate = useNavigate()
+const URI = 'https://martinandresconti.alwaysdata.net/log/'
+// const URI = 'http://localhost:3000/log/singin'
 
-  const postCustomer = async (e) =>{
-    e.preventDefault()
-    await axios.post(URI, {nombre, contraseña})
-    navigate('/')
-  }
+// export default function SingIn() {
+//   const [nombre, setNombre] = useState('')
+//   const [email, setEmail] = useState('')
+//   const [password, setPassword] = useState('')  
+//   const navigate = useNavigate()
 
-  return (
-    <div>
-      <h2>Registrarse</h2>
-      <form onSubmit={postCustomer}>
-        <div>
-          <label>Nombre</label>
-          <input 
-            value={nombre}
-            onChange={(e) =>setNombre(e.target.value)}
-          />          
-        </div>
-        <div>
-          <label>Contraseña</label>
-          <input 
-            value={contraseña}
-            onChange={(e) =>setContraseña(e.target.value)}
-          />          
-        </div>
-        <button>Log</button>
+//   const postRegistro = async (e) =>{
+//     e.preventDefault()
+//     await axios.post(URI, {nombre, email, password})
+//     navigate('/')
+//   }
 
-      </form>
-    </div>
-  )
-}
+//   return (
+//     <div>
+//       <h2>Registrarse</h2>
+//       <form onSubmit={postRegistro}>
+//         <div>
+//           <label>Nombre</label>
+//           <input 
+//             value={nombre}
+//             onChange={(e) =>setNombre(e.target.value)}
+//           />          
+//         </div>
+//         <div>
+//           <label>Email</label>
+//           <input 
+//             value={email}
+//             onChange={(e) =>setEmail(e.target.value)}
+//           />          
+//         </div>
+//         <div>
+//           <label>Password</label>
+//           <input 
+//             value={password}
+//             onChange={(e) =>setPassword(e.target.value)}
+//           />          
+//         </div>
+//         <button>Enviar</button>
+//       </form>
+//       <Link to={'/'}>Ir a inicio</Link>
+//     </div>
+//   )
+// }

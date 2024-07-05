@@ -9,31 +9,20 @@ const URI = 'http://localhost:3000/items/'
 export default function EditItem() {
   const [cerveza, setCerveza] = useState('')
   const [pinta, setPinta] = useState('')
-  // const [input, setInput] = useState({
-  //   user_name: '',
-  //   user_email:'',
-  //   message:''
-  // })
+  // const [mesa, setMesa] = useState('')
+
   const navigate = useNavigate()
-  const { id } = useParams()
+  const { id, email } = useParams()
 
-  //  const handleChange = (e)=>{
-  //   setInput((prev) => {
-  //     const newState = {
-  //       ...prev,
-  //       [e.target.name]: e.target.value
-  //     } 
 
-  //   return newState;
-  //   })
-  // }
   const updateItem = async (e) => {
     e.preventDefault()
     await axios.put(URI+id,{
       cerveza,
+      // mesa,
       pinta
     })
-    navigate('/')
+    navigate(`/home/${email}`)
   }
 
     // useEffect( ()=>{
@@ -53,13 +42,7 @@ export default function EditItem() {
           <label>Cerveza</label>
           <input 
             value={cerveza}
-            onChange={(e) =>setCerveza(e.target.value)}
-            // placeholder='Write your message...'
-            //     className={(errors.message) && style.errors }
-            //     name='message'
-            //     type='submit' 
-            //     value={input.message} 
-            //     onChange={handleChange}
+            onChange={(e) =>setCerveza(e.target.value)}            
           />          
         </div>
         <div>
@@ -69,6 +52,13 @@ export default function EditItem() {
             onChange={(e) =>setPinta(e.target.value)}
           />          
         </div>
+        {/* <div>
+          <label>Mesa</label>
+          <input 
+            value={mesa}
+            onChange={(e) =>setMesa(e.target.value)}
+          />          
+        </div> */}
         <button>Actualizar Orden </button>
 
       </form>
