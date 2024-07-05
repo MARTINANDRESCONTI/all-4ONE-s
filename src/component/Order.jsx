@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
+import './Order.css';
 
 // const URI = 'https://martinandresconti.alwaysdata.net/items/'
 const URI = 'http://localhost:3000/items/'
@@ -33,7 +34,7 @@ export default function Order() {
 console.log(items);
 
   return (
-    <div>
+    <div className="ordercontainer">
       <Link to={`/add/${email}`}>Agregar Cerveza</Link>
       {items.length > 0 && (
         items.map( (item) =>(
@@ -47,6 +48,7 @@ console.log(items);
         ))
       )
       }
+      <Link to={'/'}>Ir a inicio</Link>
     </div>
   )
 }
