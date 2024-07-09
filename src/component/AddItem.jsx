@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom';
 import Items from './Items';
 import './AddItem.css'
 
-const URI = 'https://martinandresconti.alwaysdata.net/items'
+const URI = 'https://martinandresconti.alwaysdata.net/items/'
  //const URI = 'http://localhost:3000/items/'
 
 export default function AddItem() {
