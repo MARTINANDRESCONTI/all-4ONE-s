@@ -32,7 +32,7 @@ export default function AddItem() {
           <input 
             value={cerveza}
             onChange={(e) =>setCerveza(e.target.value)}
-            // type='text'
+            type='text'
             required
           />          
         </div>
@@ -41,7 +41,7 @@ export default function AddItem() {
           <input 
             value={pinta}
             onChange={(e) =>setPinta(e.target.value)}
-            // type='number'
+            type='number'
             required
           />          
         </div>

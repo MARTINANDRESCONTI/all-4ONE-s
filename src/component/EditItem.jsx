@@ -33,7 +33,9 @@ export default function EditItem() {
             <label>Cerveza</label>
             <input 
               value={cerveza}
-              onChange={(e) =>setCerveza(e.target.value)}            
+              onChange={(e) =>setCerveza(e.target.value)}   
+              type='text'
+              required         
             />          
           </div>
           <div className='inputcontainer'>
@@ -41,6 +43,8 @@ export default function EditItem() {
             <input 
               value={pinta}
               onChange={(e) =>setPinta(e.target.value)}
+              type='number'
+              required
             />          
           </div>
           <button className='title'>Actualizar </button>
