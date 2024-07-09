@@ -2,17 +2,15 @@ import React from 'react'
 import EditItem from './component/EditItem'
 import Home from './views/Home'
 import LogIn from './views/LogIn'
-// import SingIn from './views/SingIn'
 import { Routes, Route } from 'react-router-dom'
 import AddItem from './component/AddItem'
+import './App.css'
 
 export default function App() {
   return (
-    <div>      
+    <div className='appcontainer'>     
         <Routes>
           <Route path='/' element={<LogIn />}/>
-          {/* <Route path='/singin' element={<SingIn />}/> */}
-          {/* <Route path='/home' element={<Home />}/> */}
           <Route path='/home/:email' element={<Home />}/>
           <Route path='/add/:email' element={<AddItem />} />
           <Route path='/edit/:id/:email' element={<EditItem />} />

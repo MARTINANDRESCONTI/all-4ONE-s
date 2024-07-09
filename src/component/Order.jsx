@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import './Order.css';
 
-// const URI = 'https://martinandresconti.alwaysdata.net/items/'
-const URI = 'http://localhost:3000/items/'
+ const URI = 'https://martinandresconti.alwaysdata.net/items/'
+// const URI = 'http://localhost:3000/items/'
 
 export default function Order() {
   const [items, setItems] = useState([]);
@@ -35,20 +35,25 @@ console.log(items);
 
   return (
     <div className="ordercontainer">
-      <Link to={`/add/${email}`}>Agregar Cerveza</Link>
+      <Link to={`/add/${email}`} className="title">Agregar Cerveza</Link>
+      
       {items.length > 0 && (
         items.map( (item) =>(
-            <div key={item.id}>
-              <p>{item.cerveza}</p>
-              <p>{item.pinta}</p>
-              {/* <p>{item.mesa}</p> */}
-              <Link to={`/edit/${item.id}/${email}`}>Editar</Link>
-              <button onClick={()=>deleteItem(item.id)}>Delete</button>
+            <div key={item.id} className="listcontainer">
+              <div className="listitems">
+                <p>{item.cerveza}</p>
+                <p>{item.pinta}</p>
+              </div>
+              <div className="listbuttons">                
+                <Link to={`/edit/${item.id}/${email}`} className="editar">Editar</Link>
+                <button onClick={()=>deleteItem(item.id)} className="delete">Delete</button>
+              </div>
             </div>
         ))
       )
       }
-      <Link to={'/'}>Ir a inicio</Link>
+      
+      <Link to={'/'} className="title">Ir a inicio</Link>
     </div>
   )
 }

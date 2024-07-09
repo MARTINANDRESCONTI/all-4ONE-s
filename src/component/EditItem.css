@@ -1,0 +1,52 @@
+.editcontainer{
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.eformcontainer{
+  height: 100%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  gap: 10px;
+
+}
+
+.inputcontainer{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 25px;
+  background-color: rgba(255, 255, 255, 0.575);
+
+}
+
+.inputcontainer > input {
+  width: 100%;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  background-color: white;
+  padding: 15px;
+  border-radius: 50px;
+  border: solid 3px red;
+
+}
+
+.title:hover { background-color: #9197AE; }
+
+.title a { color:var(--clr-dark)} 
+.title a:visited { text-decoration: none; color:var(--clr-dark); }
+.title a:hover { text-decoration: none; color:var(--clr-dark); }
+.title a:focus { text-decoration: none; color:var(--clr-dark); }
+.title, a:active { text-decoration: none; color:var(--clr-dark); }

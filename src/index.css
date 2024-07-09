@@ -65,75 +65,29 @@
 } */
 
 body {
-	background: var(--clr-med-light) ;
-	color: var(--clr-white);
+	background-image: url('../image/beer.jpg') ; 
+	background-repeat: no-repeat;
+	background-position:right;
+	background-position:top;
+  background-size: inherit;	  
+	overflow: hidden;
+	height: fit-content;
+	width: 100vw;
+	color: var(--clr-med-dark);
 	margin: 0;
 	font-family: var(--ff-primary);
 	font-size: var(--fs-p);
 	list-style: none;
+	background-color: rgb(36, 24, 8);
+	
 }
-/* 
+ 
 img {
 	display: block;
 	max-width: 100%;
 }
 
-.intro {
-	padding: 0px 15%;
-	height: fit-content;
-	width: 100%;
-	padding-top: 100px;
-	padding-bottom: 80px;
-	margin-bottom: 0px;
-}
 
-@media screen and (max-width: 1000px) {
-	.intro {
-		padding: 0px 12%;
-		height: fit-content;
-		width: 100%;
-		padding-top: 100px;
-		padding-bottom: 80px;
-		margin-bottom: 0px;
-	}
-
-}
-
-@media screen and (max-width: 800px) {
-	.intro {
-		padding: 0px 10%;
-		height: fit-content;
-		width: 100%;
-		padding-top: 80px;
-		padding-bottom: 80px;
-		margin-bottom: 0px;
-	}
-
-}
-
-@media screen and (max-width: 600px) {
-	.intro {
-		padding: 0px 7%;
-		height: fit-content;
-		width: 100%;
-		padding-top: 50px;
-		padding-bottom: 80px;
-		margin-bottom: 0px;
-	}
-
-}	
-
-@media screen and (max-width: 430px) {
-	.intro {
-		padding: 0px 5%;
-		height: fit-content;
-		width: 100%;
-		padding-top: 50px;
-		padding-bottom: 80px;
-		margin-bottom: 0px;
-	}
-
-}	 */
 
 /* Typography---------------- */
 
@@ -165,13 +119,3 @@ p {
 	font-size: var(--fs-p);
 }
 
-/* .section__title {
-	margin-bottom: 0.25rem;
-
-}
-
-.section__subtitle {
-	margin: 0;
-	font-size: var(--fs-h3);
-
-} */
