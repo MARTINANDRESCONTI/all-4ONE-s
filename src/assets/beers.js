@@ -20,7 +20,7 @@ const beers = [
     precio: 2500
   },
   {
-    cerveza:"pilsen",
+    cerveza:"ipa",
     precio: 2300
   }
 ]
